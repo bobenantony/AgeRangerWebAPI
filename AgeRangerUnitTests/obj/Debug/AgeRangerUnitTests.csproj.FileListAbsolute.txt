@@ -1,0 +1,7 @@
+c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerUnitTests.dll
+c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerUnitTests.pdb
+c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerWebAPI.dll
+c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerWebAPI.pdb
+c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.csprojResolveAssemblyReference.cache
+c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.dll
+c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.pdb
