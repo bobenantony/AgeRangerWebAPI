@@ -19,48 +19,26 @@ namespace AgeRangerWebAPI.Services
 
       public IList<PersonDto> GetPersons()
       {
-
          List<PersonDto> personDtoList = new List<PersonDto>();
 
          var personList = _context.Persons.ToList();
          var ageGroupList = _context.AgeGroups.ToList();
 
-         for (var i = 0; i < personList.Count; i++)
-         {
-            personDtoList.Add(new PersonDto()
-            {
-               Id = personList[i].Id,
-               FirstName = personList[i].FirstName,
-               LastName = personList[i].LastName,
-               Age = personList[i].Age,
-               AgeGroup = ageGroupList.Where(a => a.MinAge <= personList[i].Age && a.MaxAge > personList[i].Age).FirstOrDefault().Description
-            });
-         }
+         personDtoList = CommonServices.GetPersonsDto(personList, ageGroupList);
 
          return personDtoList.OrderBy(p => p.FirstName).ToList();
       }
 
       public IList<PersonDto> GetPersons(PersonSearch search)
       {
-
          List<PersonDto> personDtoList = new List<PersonDto>();
 
          var personList = _context.Persons.ToList();
          var ageGroupList = _context.AgeGroups.ToList();
 
-         for (var i = 0; i < personList.Count; i++)
-         {
-            personDtoList.Add(new PersonDto()
-            {
-               Id = personList[i].Id,
-               FirstName = personList[i].FirstName,
-               LastName = personList[i].LastName,
-               Age = personList[i].Age,
-               AgeGroup = ageGroupList.Where(a => a.MinAge <= personList[i].Age && a.MaxAge > personList[i].Age).FirstOrDefault().Description
-            });
-         }
+          personDtoList = CommonServices.GetPersonsDto(personList, ageGroupList);
 
-         var personSeachList = personDtoList.Where(p => (string.IsNullOrEmpty(search.FirstName) ? true : p.FirstName.ToLower().Contains(search.FirstName.ToLower())) &&
+          var personSeachList = personDtoList.Where(p => (string.IsNullOrEmpty(search.FirstName) ? true : p.FirstName.ToLower().Contains(search.FirstName.ToLower())) &&
                                         (string.IsNullOrEmpty(search.LastName) ? true : p.LastName.ToLower().Contains(search.LastName.ToLower())))
                                   .OrderBy(p => p.FirstName).ToList();
          return personSeachList;
@@ -82,9 +60,8 @@ namespace AgeRangerWebAPI.Services
             FirstName = personObj.FirstName,
             LastName = personObj.LastName,
             Age = personObj.Age,
-            AgeGroup = ageGroupList.Where(a => a.MinAge <= personObj.Age && a.MaxAge > personObj.Age).FirstOrDefault().Description
-         };
-
+            AgeGroup = CommonServices.AgeGroupDescription(personObj.Age, ageGroupList)
+        };
          return personDtoObj;
       }
 
@@ -98,7 +75,6 @@ namespace AgeRangerWebAPI.Services
          {
             _context.Entry(person).State = EntityState.Modified;
          }
-
          return (_context.SaveChanges() >= 0);
       }
 
@@ -112,10 +88,8 @@ namespace AgeRangerWebAPI.Services
          var personObj = _context.Persons.Where(c => c.Id == id).FirstOrDefault();
 
          _context.Persons.Remove(personObj);
-
          _context.Entry(personObj).State = EntityState.Deleted;
          _context.SaveChanges();
-         
       }
    }
 }
