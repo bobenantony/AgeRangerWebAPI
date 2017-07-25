@@ -11,9 +11,9 @@ using Microsoft.AspNetCore.Cors;
 
 namespace AgeRangerWebAPI.Controllers
 {
-   [Route("api/persons")]
-   [EnableCors("MyPolicy1")]
-   public class PersonsController : Controller
+    [Route("api/persons")]
+    [EnableCors("MyPolicy")]
+    public class PersonsController : Controller
     {
         private IPersonInfoRepository _personInfoRepository;
 
@@ -25,93 +25,93 @@ namespace AgeRangerWebAPI.Controllers
         [HttpGet()]
         public IActionResult GetPersons()
         {
-          var personEntities = _personInfoRepository.GetPersons();
-          return Ok(personEntities);
+            var personEntities = _personInfoRepository.GetPersons();
+            return Ok(personEntities);
         }
 
-      [HttpPost()]
-      [Route("Search")]
-      public IActionResult Search([FromBody] PersonSearch search)
-      {
-         IActionResult ret = null;
-         var personEntities = _personInfoRepository.GetPersons(search);
+        [HttpPost()]
+        [Route("Search")]
+        public IActionResult Search([FromBody] PersonSearch search)
+        {
+            IActionResult ret = null;
+            var personEntities = _personInfoRepository.GetPersons(search);
 
-         if (personEntities.Count > 0)
-         {
-            ret = Ok(personEntities);
-         }
-         else
-         {
-            ret = NotFound();
-         }
+            if (personEntities.Count > 0)
+            {
+                ret = Ok(personEntities);
+            }
+            else
+            {
+                ret = NotFound();
+            }
 
-         return ret;
-      }
+            return ret;
+        }
 
 
-      [HttpGet("{id}")]
-      public IActionResult GetPerson(int id)
-      {
-         var person = _personInfoRepository.GetPerson(id);
-        
-         return Ok(person);
-      }
+        [HttpGet("{id}")]
+        public IActionResult GetPerson(int id)
+        {
+            var person = _personInfoRepository.GetPerson(id);
 
-      [HttpPut("{id}")]
-      public IActionResult UpdatePerson(int Id, [FromBody] Person person)
-      {
-         if (person == null)
-         {
-            return BadRequest();
-         }
+            return Ok(person);
+        }
 
-         if (!ModelState.IsValid)
-         {
-            return BadRequest(ModelState);
-         }
+        [HttpPut("{id}")]
+        public IActionResult UpdatePerson(int Id, [FromBody] Person person)
+        {
+            if (person == null)
+            {
+                return BadRequest();
+            }
 
-       
-         if (!_personInfoRepository.SavePerson(person,"update"))
-         {
-            return StatusCode(500, "A problem happened while handling your request.");
-         }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-         return Ok(person);
-      }
 
-      [HttpPost()]
-      public IActionResult CreatePerson(int Id,
-            [FromBody] Person person)
-      {
-         if (person == null)
-         {
-            return BadRequest();
-         }
+            if (!_personInfoRepository.SavePerson(person, "update"))
+            {
+                return StatusCode(500, "A problem happened while handling your request.");
+            }
 
-         if (!ModelState.IsValid)
-         {
-            return BadRequest(ModelState);
-         }
+            return Ok(person);
+        }
 
-         if (!_personInfoRepository.SavePerson(person,"insert"))
-         {
-            return StatusCode(500, "A problem happened while handling your request.");
-         }
+        [HttpPost()]
+        public IActionResult CreatePerson(int Id,
+              [FromBody] Person person)
+        {
+            if (person == null)
+            {
+                return BadRequest();
+            }
 
-         return Ok(person);
-      }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-      [HttpDelete("{id}")]
-      public IActionResult DeletePerson(int id)
-      {
-         _personInfoRepository.DeletePerson(id);
+            if (!_personInfoRepository.SavePerson(person, "insert"))
+            {
+                return StatusCode(500, "A problem happened while handling your request.");
+            }
 
-         if (!_personInfoRepository.Save())
-         {
-            return StatusCode(500, "A problem happened while handling your request.");
-         }
+            return Ok(person);
+        }
 
-         return NoContent();
-      }
-   }
+        [HttpDelete("{id}")]
+        public IActionResult DeletePerson(int id)
+        {
+            _personInfoRepository.DeletePerson(id);
+
+            if (!_personInfoRepository.Save())
+            {
+                return StatusCode(500, "A problem happened while handling your request.");
+            }
+
+            return NoContent();
+        }
+    }
 }

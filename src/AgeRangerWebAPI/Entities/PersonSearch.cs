@@ -8,6 +8,7 @@ namespace AgeRangerWebAPI.Entities
     public class PersonSearch
     {
       public string FirstName { get; set; }
+
       public string LastName { get; set; }
    }
 }

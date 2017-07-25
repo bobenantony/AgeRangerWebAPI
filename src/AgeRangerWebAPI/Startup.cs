@@ -20,6 +20,7 @@ namespace AgeRangerWebAPI
 
         public Startup(IHostingEnvironment env)
         {
+            /* "appSettings.json" file contains the DB Connection string */
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appSettings.json", optional: false, reloadOnChange: true);
@@ -30,17 +31,18 @@ namespace AgeRangerWebAPI
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-         services.AddCors(o => o.AddPolicy("MyPolicy1", builder =>
-         {
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
-         }));
-         services.AddMvc();
-            
-         //services.AddEntityFrameworkSqlite().AddDbContext<PersonInfoContext>();
+            /* Middleware service for Cross Origin - Resource sharing */
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
 
-         var connectionString = Startup.Configuration["connectionStrings:ageRangerInfoDBConnectionString"];
+            /* Middleware service for MVC */
+            services.AddMvc();
+
+            var connectionString = Startup.Configuration["connectionStrings:ageRangerInfoDBConnectionString"];
             services.AddDbContext<PersonInfoContext>(o => o.UseSqlServer(connectionString));
             services.AddScoped<IPersonInfoRepository, PersonInfoRepository>();
         }
@@ -50,7 +52,10 @@ namespace AgeRangerWebAPI
         {
             loggerFactory.AddConsole();
 
+            /* DB Context calls this method to seed the Master data in the related tables */
             personInfoContext.EnsureSeedDataForContext();
+
+            /* For the Http Status code pages */
             app.UseStatusCodePages();
 
             AutoMapper.Mapper.Initialize(cfg =>
@@ -58,12 +63,13 @@ namespace AgeRangerWebAPI
                 cfg.CreateMap<Entities.Person, Models.PersonDto>();
             });
 
-         // Shows UseCors with CorsPolicyBuilder.
-         app.UseCors(builder => {
-            builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-         });
+            // Shows UseCors with CorsPolicyBuilder.
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            });
 
-         app.UseMvc();
+            app.UseMvc();
 
             if (env.IsDevelopment())
             {
