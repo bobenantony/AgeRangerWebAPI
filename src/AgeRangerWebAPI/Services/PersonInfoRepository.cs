@@ -72,6 +72,16 @@ namespace AgeRangerWebAPI.Services
         /*Save  a single record for person based on 'Add or Update' */
         public bool SavePerson(Person person, String action)
         {
+            if (person.Age < 0)
+            {
+                person.Age = 0;
+            }
+
+            if (person.Age > 2147483646)
+            {
+                person.Age = 2147483646;
+            }
+
             if (action == "insert")
             {
                 _context.Entry(person).State = EntityState.Added;

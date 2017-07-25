@@ -29,7 +29,7 @@ namespace AgeRangerWebAPI
                 new AgeGroup() { MinAge =99,MaxAge=110,Description = "Very Old" },
                 new AgeGroup() { MinAge =110,MaxAge=199,Description = "Crazy ancient" },
                 new AgeGroup() { MinAge =199,MaxAge=4999,Description = "Vampire" },
-                new AgeGroup() { MinAge =4999,MaxAge=10000,Description = "Kauri tree" },
+                new AgeGroup() { MinAge =4999,MaxAge=2147483647,Description = "Kauri tree" },
             };
 
             context.AgeGroups.AddRange(AgeGroups);
