@@ -33,7 +33,7 @@ namespace AgeRangerWebAPI.Services
                FirstName = personList[i].FirstName,
                LastName = personList[i].LastName,
                Age = personList[i].Age,
-               AgeGroup = ageGroupList.Where(a => a.MinAge < personList[i].Age && a.MaxAge > personList[i].Age).FirstOrDefault().Description
+               AgeGroup = ageGroupList.Where(a => a.MinAge <= personList[i].Age && a.MaxAge > personList[i].Age).FirstOrDefault().Description
             });
          }
 
@@ -56,7 +56,7 @@ namespace AgeRangerWebAPI.Services
                FirstName = personList[i].FirstName,
                LastName = personList[i].LastName,
                Age = personList[i].Age,
-               AgeGroup = ageGroupList.Where(a => a.MinAge < personList[i].Age && a.MaxAge > personList[i].Age).FirstOrDefault().Description
+               AgeGroup = ageGroupList.Where(a => a.MinAge <= personList[i].Age && a.MaxAge > personList[i].Age).FirstOrDefault().Description
             });
          }
 
@@ -82,7 +82,7 @@ namespace AgeRangerWebAPI.Services
             FirstName = personObj.FirstName,
             LastName = personObj.LastName,
             Age = personObj.Age,
-            AgeGroup = ageGroupList.Where(a => a.MinAge < personObj.Age && a.MaxAge > personObj.Age).FirstOrDefault().Description
+            AgeGroup = ageGroupList.Where(a => a.MinAge <= personObj.Age && a.MaxAge > personObj.Age).FirstOrDefault().Description
          };
 
          return personDtoObj;

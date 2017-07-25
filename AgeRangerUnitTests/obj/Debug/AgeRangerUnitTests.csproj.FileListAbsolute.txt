@@ -5,3 +5,23 @@ c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUn
 c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.csprojResolveAssemblyReference.cache
 c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.dll
 c:\users\betcy\documents\visual studio 2015\Projects\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.pdb
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerUnitTests.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerUnitTests.pdb
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerWebAPI.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.Helpers.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.Mvc.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.Razor.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerWebAPI.pdb
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.Helpers.xml
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.Mvc.xml
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.Razor.xml
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.xml
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.csprojResolveAssemblyReference.cache
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.dll
+C:\GitHub\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.pdb
