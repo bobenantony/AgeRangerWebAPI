@@ -13,10 +13,10 @@ namespace AgeRangerWebAPI.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public int MinAge { get; set; }
+        public int ? MinAge { get; set; }
 
-        public int MaxAge { get; set; }
-
+        public int ? MaxAge { get; set; }
+        
         public string Description { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AgeRangerWebAPI.Entities;
 using AgeRangerWebAPI.Models;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace AgeRangerWebAPI.Services
 {
@@ -34,6 +35,15 @@ namespace AgeRangerWebAPI.Services
         /*Returns age group description for a given age of the person */
         public static string AgeGroupDescription (int age , List<AgeGroup> ageGroupList)
         {
+            //int indexMinAgeNull = ageGroupList.FindIndex(a => a.MinAge == null || a.MinAge == 0);
+            //int indexMaxAgeNull = ageGroupList.FindIndex(a => a.MaxAge == null  || a.MaxAge == 2147483646);
+
+            if (ageGroupList[0].MinAge == null || ageGroupList[11].MaxAge == null)
+            {
+                ageGroupList[0].MinAge = 0;
+                ageGroupList[11].MaxAge = 2147483646;
+            }
+
             return ageGroupList.Where(a => a.MinAge <= age && a.MaxAge > age).FirstOrDefault().Description;
         }
     }

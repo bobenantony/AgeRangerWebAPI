@@ -8,9 +8,10 @@ using AgeRangerWebAPI.Entities;
 namespace AgeRangerWebAPI.Migrations
 {
     [DbContext(typeof(PersonInfoContext))]
-    partial class PersonInfoContextModelSnapshot : ModelSnapshot
+    [Migration("20170725191146_v2")]
+    partial class v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.0-rtm-22752")
