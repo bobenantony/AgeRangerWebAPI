@@ -35,9 +35,7 @@ namespace AgeRangerWebAPI.Services
         /*Returns age group description for a given age of the person */
         public static string AgeGroupDescription (int age , List<AgeGroup> ageGroupList)
         {
-            //int indexMinAgeNull = ageGroupList.FindIndex(a => a.MinAge == null || a.MinAge == 0);
-            //int indexMaxAgeNull = ageGroupList.FindIndex(a => a.MaxAge == null  || a.MaxAge == 2147483646);
-
+            /*  Setting the integer maximum value  */
             if (ageGroupList[0].MinAge == null || ageGroupList[11].MaxAge == null)
             {
                 ageGroupList[0].MinAge = 0;
