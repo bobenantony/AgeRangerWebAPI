@@ -18,7 +18,7 @@ namespace AgeRangerWebApiUnitTests
        * Expected result should not be null
        */
       [TestMethod]
-        public void GetPerson_ValidPersonEntry_NotBeNull()
+        public void GetPerson_ValidPersonEntry_ShouldNotBeNull()
         {
          PersonDto personDtoObj = new PersonDto()
          {

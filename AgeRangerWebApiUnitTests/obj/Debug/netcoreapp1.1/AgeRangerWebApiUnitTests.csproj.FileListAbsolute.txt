@@ -5,10 +5,10 @@ C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\bin\Debug\netcore
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\bin\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.runtimeconfig.json
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\bin\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.runtimeconfig.dev.json
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\bin\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.dll
+C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\bin\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.pdb
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\bin\Debug\netcoreapp1.1\AgeRangerWebAPI.dll
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\bin\Debug\netcoreapp1.1\AgeRangerWebAPI.pdb
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\obj\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.csprojResolveAssemblyReference.cache
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\obj\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.AssemblyInfo.cs
-C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\bin\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.pdb
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\obj\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.dll
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerWebApiUnitTests\obj\Debug\netcoreapp1.1\AgeRangerWebApiUnitTests.pdb

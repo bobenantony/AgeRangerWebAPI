@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AgeRangerWebAPI.Controllers;
 
 namespace AgeRangerUnitTests
 {
