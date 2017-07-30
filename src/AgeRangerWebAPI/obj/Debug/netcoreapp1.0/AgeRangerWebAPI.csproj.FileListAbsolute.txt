@@ -1,0 +1,9 @@
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\bin\Debug\netcoreapp1.0\AgeRangerWebAPI.deps.json
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\bin\Debug\netcoreapp1.0\AgeRangerWebAPI.runtimeconfig.json
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\bin\Debug\netcoreapp1.0\AgeRangerWebAPI.runtimeconfig.dev.json
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\bin\Debug\netcoreapp1.0\AgeRangerWebAPI.dll
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\bin\Debug\netcoreapp1.0\AgeRangerWebAPI.pdb
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\obj\Debug\netcoreapp1.0\AgeRangerWebAPI.csprojResolveAssemblyReference.cache
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\obj\Debug\netcoreapp1.0\AgeRangerWebAPI.AssemblyInfo.cs
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\obj\Debug\netcoreapp1.0\AgeRangerWebAPI.dll
+C:\Users\boben.antony\AgeRangerWebAPI\src\AgeRangerWebAPI\obj\Debug\netcoreapp1.0\AgeRangerWebAPI.pdb

@@ -1,19 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{11B0C091-EB5B-4690-88CC-4553B8ACF5AA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38259E12-4504-4628-958F-2A90433438EC}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AgeRangerWebAPI", "src\AgeRangerWebAPI\AgeRangerWebAPI.xproj", "{236E6C67-F579-43DD-9095-9BE6B8C0E6F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DDC232EB-6EED-4730-962E-FFC0B2D5E753}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgeRangerWebAPI", "src\AgeRangerWebAPI\AgeRangerWebAPI.csproj", "{236E6C67-F579-43DD-9095-9BE6B8C0E6F2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeRangerUnitTests", "AgeRangerUnitTests\AgeRangerUnitTests.csproj", "{BE45FAD7-38D0-42EB-97A5-AF5F556A2746}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeRangerWebApiUnitTests", "AgeRangerWebApiUnitTests\AgeRangerWebApiUnitTests.csproj", "{7B756D38-36B4-49DD-A2DD-D3AE781E0FCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +30,6 @@ Global
 		{BE45FAD7-38D0-42EB-97A5-AF5F556A2746}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE45FAD7-38D0-42EB-97A5-AF5F556A2746}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE45FAD7-38D0-42EB-97A5-AF5F556A2746}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B756D38-36B4-49DD-A2DD-D3AE781E0FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B756D38-36B4-49DD-A2DD-D3AE781E0FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B756D38-36B4-49DD-A2DD-D3AE781E0FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B756D38-36B4-49DD-A2DD-D3AE781E0FCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +37,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{236E6C67-F579-43DD-9095-9BE6B8C0E6F2} = {11B0C091-EB5B-4690-88CC-4553B8ACF5AA}
 		{BE45FAD7-38D0-42EB-97A5-AF5F556A2746} = {DDC232EB-6EED-4730-962E-FFC0B2D5E753}
-		{7B756D38-36B4-49DD-A2DD-D3AE781E0FCB} = {DDC232EB-6EED-4730-962E-FFC0B2D5E753}
 	EndGlobalSection
 EndGlobal
