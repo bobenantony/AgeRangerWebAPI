@@ -8,6 +8,7 @@ using AgeRangerWebAPI.Models;
 using Moq;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace AgeRangerWebApiUnitTests
 {
@@ -17,6 +18,7 @@ namespace AgeRangerWebApiUnitTests
       private PersonsController _controller;
       private Mock<IPersonInfoRepository> _mockRepository;
       private PersonDto personDtoObj;
+      private List<PersonDto> personDtoList;
 
       [TestInitialize]
       public void TestInitialize()
@@ -32,6 +34,11 @@ namespace AgeRangerWebApiUnitTests
             Age = 37,
             AgeGroup = "Very Adult"
          };
+
+         /*Initializing a list of PersonDtoObj*/
+         personDtoList = new List<PersonDto>() {
+            new PersonDto() {Id = 1, FirstName = "Boben", LastName = "Antony", Age = 37, AgeGroup = "Very Adult" }
+         };
       }
 
       /* Method Testing - GetPerson()  
@@ -39,7 +46,7 @@ namespace AgeRangerWebApiUnitTests
        * Expected result 'should not be null'
        */
       [TestMethod]
-        public void GetPerson_ValidPersonEntry_ShouldNotBeNull()
+        public void GetPerson_ValidPersonID_ShouldNotBeNull()
         {
         _mockRepository.Setup(x => x.GetPerson(It.IsAny<int>())).Returns(personDtoObj);
 
@@ -60,6 +67,35 @@ namespace AgeRangerWebApiUnitTests
          var result = _controller.GetPerson(2);
 
          result.Should().BeOfType<NotFoundResult>();
+      }
+
+      /* Method Testing - GetPersons()  
+       * Test - Checking the result for empty parameter and valid object
+       * Expected result 'should not be null'
+       */
+      [TestMethod]
+      public void GetPersons_ValidObject_ShouldNotBeNull()
+      {
+         _mockRepository.Setup(x => x.GetPersons()).Returns(personDtoList);
+
+         _controller = new PersonsController(_mockRepository.Object);
+         _controller.GetPersons();
+         _controller.Should().NotBeNull();
+      }
+
+      /* Method Testing - GetPersons()  
+       * Test - Checking the result for empty parameter and empty person
+       * Expected result 'should Return Not Found'
+       */
+      [TestMethod]
+      public void GetPersons_NullObject_ShouldReturnNotFound()
+      {
+         personDtoList = new List<PersonDto>() { };
+         _mockRepository.Setup(x => x.GetPersons()).Returns(personDtoList);
+
+         _controller = new PersonsController(_mockRepository.Object);
+         _controller.GetPersons();
+         _controller.Should().BeOfType<NotFoundResult>();
       }
    }
 }

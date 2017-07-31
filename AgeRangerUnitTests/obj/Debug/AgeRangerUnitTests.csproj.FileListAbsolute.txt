@@ -40,6 +40,8 @@ C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.Ra
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.xml
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.csprojResolveAssemblyReference.cache
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.dll
 C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.pdb
+C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerWebAPI.dll
+C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\bin\Debug\AgeRangerWebAPI.pdb
+C:\Users\boben.antony\AgeRangerWebAPI\AgeRangerUnitTests\obj\Debug\AgeRangerUnitTests.csprojResolveAssemblyReference.cache
