@@ -52,9 +52,12 @@ namespace AgeRangerWebAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetPerson(int id)
         {
-            var person = _personInfoRepository.GetPerson(id);
+             var person = _personInfoRepository.GetPerson(id);
 
-            return Ok(person);
+              if (person == null)
+                 return NotFound();
+
+              return Ok(person);
         }
 
         [HttpPut("{id}")]
