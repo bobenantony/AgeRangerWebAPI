@@ -19,4 +19,8 @@ Here it helps mapping between Person entity and PersonDto
 Brief comment lines are added for the functionalities in Repositories , Common services & start up classes to help 
 code review easy
 
-Unit tests can be found in the project AgeRangerWebApiUnitTests Project
+Unit tests can be found in the project AgeRangerWebApiUnitTests Project.
+
+Unit tests are performed on Controller and they are based on MOQ and Fluent assertions.
+
+Moq is a third party library that enables us to create the dummy class and its methods’ dummy implementation without actually creating a class with actual method implementation
