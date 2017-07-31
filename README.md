@@ -21,6 +21,6 @@ code review easy
 
 Unit tests can be found in the project AgeRangerWebApiUnitTests Project.
 
-Unit tests are performed on Controller and they are based on MOQ and Fluent assertions.
+Unit tests are performed for Controller methods and they are based on MOQ and Fluent assertions.
 
 Moq is a third party library that enables us to create the dummy class and its methods’ dummy implementation without actually creating a class with actual method implementation
